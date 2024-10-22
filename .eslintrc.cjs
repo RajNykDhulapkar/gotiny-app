@@ -5,7 +5,7 @@
  */
 
 /** @type {import('eslint').Linter.Config} */
-module.exports = {
+export default {
   root: true,
   parserOptions: {
     ecmaVersion: "latest",
@@ -47,6 +47,9 @@ module.exports = {
         "import/resolver": {
           typescript: {},
         },
+      },
+      rules: {
+        "react/prop-types": "off",
       },
     },
 
