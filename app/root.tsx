@@ -10,6 +10,8 @@ import type { LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
 
 import "./tailwind.css";
 import { themeSessionResolver } from "./sessions.server";
+import Navbar from "~/components/Navbar";
+
 import {
   PreventFlashOnWrongTheme,
   ThemeProvider,
@@ -59,7 +61,23 @@ export function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <Navbar />
+
+        <div className="min-h-screen relative overflow-y-hidden flex flex-col gap-[8rem] pt-[16rem] items-center justify-start bg-radial-gradient-custom  text-foreground p-4">
+          <img
+            className="z-[0] absolute w-full h-screen top-0 left-0 opacity-100 dark:opacity-70"
+            src="/swirl.svg"
+            alt="swirl"
+          />
+
+          <img
+            className=" z-[1] absolute w-full h-auto top-0 left-0 opacity-5 dark:opacity-20"
+            src="/cubes.svg"
+            alt="cubes"
+          />
+          <Outlet />
+        </div>
+
         <ScrollRestoration />
         <Scripts />
       </body>
