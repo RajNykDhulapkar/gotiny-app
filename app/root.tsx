@@ -56,11 +56,26 @@ export function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css"
+        />
         <Meta />
         <PreventFlashOnWrongTheme ssrTheme={Boolean(data.theme)} />
         <Links />
       </head>
       <body>
+        <a
+          target="_blank"
+          className="github-fork-ribbon"
+          href="https://github.com/RajNykDhulapkar/gotiny"
+          data-ribbon="Fork me on GitHub"
+          title="Fork me on GitHub"
+          rel="noreferrer"
+        >
+          Fork me on GitHub
+        </a>
         <Navbar />
 
         <div className="min-h-screen relative overflow-y-hidden flex flex-col gap-[8rem] pt-[16rem] items-center justify-start bg-radial-gradient-custom  text-foreground p-4">
