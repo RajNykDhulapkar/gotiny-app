@@ -20,7 +20,7 @@ const LinksTable = () => {
 
   if (loaderData.error) {
     return (
-      <Alert variant="destructive">
+      <Alert className="z-[4] w-full max-w-xl" variant="destructive">
         <AlertDescription>{loaderData.error}</AlertDescription>
       </Alert>
     );
@@ -30,7 +30,7 @@ const LinksTable = () => {
 
   if (!urls.length) {
     return (
-      <Alert>
+      <Alert className="z-[4] w-full max-w-xl">
         <AlertDescription>
           No URLs found. Create your first short link above!
         </AlertDescription>
